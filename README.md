@@ -1,7 +1,7 @@
 
 # Forgotten Gems of PowerShell
 
-![Forgotten Gems/ Hania Bielawska](Presentation/Media/Gems.png)
+![Forgotten Gems/ Hania Bielawska](Presentation/Media/Gem.png)
 
 Folders:
 
