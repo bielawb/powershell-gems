@@ -26,7 +26,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Border Grid.ColumnSpan="3" >
-            <TextBlock FontSize="200">Feedback?</TextBlock>
+            <TextBlock FontSize="150">Feedback?</TextBlock>
         </Border>
         <Image Grid.Row="1" Grid.ColumnSpan="3" Source="Media/qr-code.png"/>
         <Image Grid.Row="2" Source="Media/PSConfEU-Logo.png" HorizontalAlignment="Left" Height="100"/>

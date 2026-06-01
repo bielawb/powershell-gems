@@ -10,5 +10,5 @@ if ($value = Get-Content $psISE.CurrentFile.FullPath) {
 $valueHidden = Get-Process | Where-Object -Property Name -Like *PowerShell*
 $valueHidden
 ($valueShown = Get-Process | Where-Object -Property Name -Like *PowerShell*)
-
-$assign = Get-ChildItem
+$valueShown
+Start-NextDemo

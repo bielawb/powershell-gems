@@ -15,3 +15,12 @@ ${function:Get-Foo} = {
 
 Get-Foo -Bar IsBar
 
+$function:test = {
+    param (
+        [String]$Value
+    )
+}
+
+$function:Get-Foo
+
+Start-NextDemo

@@ -1,0 +1,94 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    SizeToContent="Height"
+    Topmost="True">
+    <Grid Margin="10">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="CaskaydiaCove Nerd Font Mono" />
+                <Setter Property="TextBlock.Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Margin="10" TextAlignment="Center" FontSize="50">
+            Demos - where to start?
+        </TextBlock>
+        <Image Grid.Column="1" Source="Media/PSConfEU-Logo.png" HorizontalAlignment="Right" Height="100"/>
+        <Image Grid.Column="0" Grid.RowSpan="3" Source="../Presentation/Media/Gem.png" >
+             <Image.Effect>
+                <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+            </Image.Effect>
+        </Image>
+        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="20,20,20,20">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="40" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="FontFamily" Value="CaskaydiaCove Nerd Font Mono" />
+                    <Setter Property="TextBlock.Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+                <Style TargetType="Image">
+                    <Setter Property="Source" Value="../Presentation/Media/gems-small.png" />
+                    <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant" />
+                    <Setter Property="Stretch" Value="Fill" />
+                    <Setter Property="Height" Value="40" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="Margin" Value="15" />
+                    <Setter Property="Image.Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Image/><TextBlock>Bracket</TextBlock></StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Tee</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Vars are Files</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Recursive Globbing</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Streams</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Filters</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Object Cmdlets and ScriptBlocks</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>ValueFromPipelineByPropertyName</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Switch With File</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Pipeline Variable</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image /><TextBlock>Using Clipboard</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

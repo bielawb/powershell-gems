@@ -2,12 +2,15 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     SizeToContent="Height"
+    FontSize="40"
     Topmost="True">
     <Grid Margin="10,40,10,10">
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="CaskaydiaCove Nerd Font Mono" />
                 <Setter Property="TextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="50" />
+                <Setter Property="Margin" Value="10" />
                 <Setter Property="TextBlock.Effect">
                     <Setter.Value>
                         <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
@@ -17,22 +20,22 @@
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Border Grid.ColumnSpan="3" >
-            <TextBlock FontSize="150">Q&#160;&amp;&#160;A</TextBlock>
-        </Border>
-        <Image Grid.Row="1" Grid.ColumnSpan="3" Source="Media/QA.png" />
-        <Image Grid.Row="2" Source="Media/PSConfEU-Logo.png" HorizontalAlignment="Left" Height="100"/>
-        <Border Grid.Column="1" Grid.Row="2" Height="50">
-            <TextBlock FontSize="30">Forgotten Gems of PowerShell</TextBlock>
-        </Border>
-        <Image Grid.Column="2" Grid.Row="2" Source="Media/Wiesbaden26.png" HorizontalAlignment="Right" Height="100" />
+        <TextBlock Grid.ColumnSpan="3">Switch With Files</TextBlock>
+        <Image Grid.Row="1" Grid.ColumnSpan="3" Source="../Presentation/Media/Gem.png" >
+             <Image.Effect>
+                <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />
+            </Image.Effect>
+        </Image>
+        <Image Grid.Row="2" Source="../Presentation/Media/PSConfEU-Logo.png" HorizontalAlignment="Left" Height="100"/>
+        <TextBlock Grid.Column="1" Grid.Row="2">Forgotten Gems of PowerShell</TextBlock>
+        <Image Grid.Column="2" Grid.Row="2" Source="../Presentation/Media/Wiesbaden26.png" HorizontalAlignment="Right" Height="100" />
     </Grid>
 </Window>
