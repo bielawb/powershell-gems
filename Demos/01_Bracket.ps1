@@ -11,4 +11,5 @@ $valueHidden = Get-Process | Where-Object -Property Name -Like *PowerShell*
 $valueHidden
 ($valueShown = Get-Process | Where-Object -Property Name -Like *PowerShell*)
 $valueShown
+
 Start-NextDemo

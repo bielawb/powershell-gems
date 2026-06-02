@@ -7,7 +7,7 @@ $help = Get-Help -Name about_output_streams
 $help -replace '(?ms).*(^PowerShell supports.*?redirection\.).*', '$1'
 
 $redirect = Get-Help -Name about_Redirection
-$redirect -replace '(?ms).*(^PowerShell redirection.*?SUCCESS stream\.).*', '$1'
+$redirect -replace '(?ms).*(^PowerShell redirection.*?NOTE.*?SUCCESS stream\.).*', '$1'
 
 Test-DscConfiguration -Verbose -Detailed 4>&1 | Tee-Object -Variable output
 $output
