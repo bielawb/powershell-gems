@@ -28,7 +28,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.ColumnSpan="3">PipelineVariable</TextBlock>
+        <TextBlock Grid.ColumnSpan="3">Using -PipelineVariable</TextBlock>
         <Image Grid.Row="1" Grid.ColumnSpan="3" Source="../Presentation/Media/Gem.png" >
              <Image.Effect>
                 <DropShadowEffect Direction="-45" Color="#FFB6C2CB" ShadowDepth="10" BlurRadius="14" />

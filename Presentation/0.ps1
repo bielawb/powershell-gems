@@ -33,3 +33,7 @@ function Start-NextDemo {
         $psISE.CurrentPowerShellTab.Files.SetSelectedFile($qa)
     }
 }
+
+$creds = Import-Clixml -Path C:\RecycleBin\creds.clixml
+$session = New-PSSession -ComputerName 192.168.56.10 -Credential $creds
+Start-DscConfiguration -UseExisting -Wait

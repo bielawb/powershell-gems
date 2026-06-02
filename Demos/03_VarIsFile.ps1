@@ -4,6 +4,15 @@
 }
 
 ${C:\Windows\system32\drivers\etc\hosts}
+Push-Location C:\Windows\System32\drivers\etc\
+$c:hosts
+
+$c:hosts += @'
+1.2.3.4   fo.bar
+'@
+ping fo.bar
+$c:hosts
+Pop-Location
 
 ${function:Get-Foo} = {
     param (

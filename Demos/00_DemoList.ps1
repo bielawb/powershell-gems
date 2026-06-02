@@ -16,7 +16,7 @@ class Topic {
 }
 $map = @{}
 Get-ChildItem -Path C:\Repos\powershell-gems\Demos\*.ps1 | ForEach-Object {
-    if ($_.BaseName -match '00') {
+    if ($_.BaseName -match '0[0-3]') {
         # well...
         return
     }
@@ -47,10 +47,17 @@ function Get-TopicCount {
 
     end {
         $list = foreach ($key in $PSBoundParameters.Keys) {
+            if ($key -eq 'Verbose') {
+                continue
+            }
             [topic]::new($key, $PSBoundParameters.$key, $map[$key])
         }
         $Global:demoQueue = [System.Collections.Queue]::new()
         $list | Sort-Object -Descending Count | Tee-Object -Variable sortedList
+        Write-Verbose -Message "Manipulating data..."
+        Get-ChildItem -Path C:\Repos\powershell-gems\Demos\0[123]*.ps1 | ForEach-Object {
+            $Global:demoQueue.Enqueue($_.FullName)
+        }
         foreach ($item in $sortedList) {
             $Global:demoQueue.Enqueue($item.FilePath)
         }
@@ -58,4 +65,5 @@ function Get-TopicCount {
 }
 
 Get-TopicCount
+
 Start-NextDemo
