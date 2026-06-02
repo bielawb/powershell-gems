@@ -12,8 +12,8 @@ $body = @{
     name = (Get-Clipboard)
     ip = $dns[0].IPAddress
 } | ConvertTo-Json
-
 $body | Write-Verbose -Verbose
 Invoke-RestMethod -Method Post -Body $body -Uri https://notthere.com -Verbose
 
+# Next! microsoft.com
 Start-NextDemo
