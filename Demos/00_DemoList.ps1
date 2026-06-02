@@ -72,6 +72,7 @@ function Get-TopicCount {
     }
 }
 
-Get-TopicCount
+Get-TopicCount -Clipboard 5 -UsingPV 10 -Filters 15 -Globbing 20 -Streams 30 -ObjectScriptBlock 25 -SwitchFile 18 -ValueByPropertyName 9 -Verbose
+
 
 Start-NextDemo

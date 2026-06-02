@@ -32,7 +32,7 @@ function Get-Pipeline {
     }
 }
 
-'Hania', 'Paweł', 'Ewa' | Get-Pipeline
+'Hania', 'Paweł', 'Ewa' | Get-Pipeline -Verbose
 
 filter Get-Easier {
     param (

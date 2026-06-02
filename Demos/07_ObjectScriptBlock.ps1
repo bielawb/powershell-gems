@@ -39,5 +39,6 @@ Get-ChildItem -Recurse -Path C:\Repos -Filter G*.ps1 | Sort-Object {
     }
 }
 
+Get-ChildItem -Recurse -Path C:\Repos -Filter G*.ps1 | Group-Object { $_.BaseName -match '.tests$' }
 
 Start-NextDemo
