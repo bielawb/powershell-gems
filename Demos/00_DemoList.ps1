@@ -52,12 +52,20 @@ function Get-TopicCount {
             }
             [topic]::new($key, $PSBoundParameters.$key, $map[$key])
         }
+        $prio = 0
+        $prioCount = 3kb, 2kb, 1kb
+        $list += Get-ChildItem -Path C:\Repos\powershell-gems\Demos\0[123]*.ps1 | ForEach-Object {
+            [topic]::new(
+                $_.BaseName -replace '^\d+_',
+                $prioCount[$prio],
+                $_.FullName
+            )
+            $prio++
+        }
+
         $Global:demoQueue = [System.Collections.Queue]::new()
         $list | Sort-Object -Descending Count | Tee-Object -Variable sortedList
         Write-Verbose -Message "Manipulating data..."
-        Get-ChildItem -Path C:\Repos\powershell-gems\Demos\0[123]*.ps1 | ForEach-Object {
-            $Global:demoQueue.Enqueue($_.FullName)
-        }
         foreach ($item in $sortedList) {
             $Global:demoQueue.Enqueue($item.FilePath)
         }

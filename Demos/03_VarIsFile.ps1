@@ -26,14 +26,18 @@ ${function:Get-Foo} = {
 Get-Foo -Bar IsBar
 
 $function:test = @'
-
     param (
         [String]$Value
     )
+    "Value is $Value"
 '@
+
+test foo
 
 $function:test += 'fail'
 
 $function:Get-Foo
+
+Get-ChildItem -Path Env:
 
 Start-NextDemo
