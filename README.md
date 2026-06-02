@@ -5,8 +5,8 @@
 
 Folders:
 
-- Presentation - XAML "slides" and all the pictures
-- Demos - scripts used in the demos
+- [Presentation](./Presentation/) - XAML "slides" and all the pictures
+- [Demos](./Demos/) - scripts used in the demos
 
 Feedback:
 ![Feedback - Forgotten Gems of PowerShell](Presentation/Media/qr-code.png)
