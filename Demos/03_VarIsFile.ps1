@@ -32,6 +32,8 @@ $function:test = @'
     )
 '@
 
+$function:test += 'fail'
+
 $function:Get-Foo
 
 Start-NextDemo
