@@ -22,13 +22,15 @@ ${function:Get-Foo} = {
     "Bar: $Bar"
 }
 
+
 Get-Foo -Bar IsBar
 
-$function:test = {
+$function:test = @'
+
     param (
         [String]$Value
     )
-}
+'@
 
 $function:Get-Foo
 
